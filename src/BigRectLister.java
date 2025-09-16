@@ -18,6 +18,9 @@ public class BigRectLister
 
         filter = new BigRectangleFilter();
 
+        System.out.println("Rectangle Number          Height Width  Perimeter");
+        System.out.println("=================================================");
+
         for(Rectangle rec : rectangles)
         {
             if(filter.accept(rec))

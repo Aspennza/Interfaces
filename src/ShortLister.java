@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import static java.nio.file.StandardOpenOption.CREATE;
 
 //Tasks:
+//check prof. wulf's second recording on thursday for reference on ShortLister and BigRectLister
 //Create UML diagrams
 //Create JUnit tests? it doesn't seem like they're required??
 //Write javadoc
