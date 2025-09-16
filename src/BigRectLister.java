@@ -2,8 +2,6 @@ import java.awt.*;
 import java.util.ArrayList;
 import java.util.Random;
 
-
-
 public class BigRectLister
 {
     static final int TOTAL_RECTANGLES = 10;
