@@ -62,11 +62,11 @@ public class ShortLister
 
                     for(String f : fields)
                     {
-                        shortWord = filter.accept(fields[fieldsIndex]);
+                        shortWord = filter.accept(fields[fieldsIndex].replaceAll("[.,;?:!()/]", ""));
 
                         if(shortWord)
                         {
-                            System.out.println("\n\n" + fields[fieldsIndex]);
+                            System.out.println(fields[fieldsIndex].replaceAll("[.,;?:!()/]", ""));
                         }
 
                         fieldsIndex++;
