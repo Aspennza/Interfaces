@@ -8,6 +8,7 @@ import static java.nio.file.StandardOpenOption.CREATE;
 
 //Tasks:
 //Create UML diagrams
+//Create JUnit tests? it doesn't seem like they're required??
 //Write javadoc
 
 public class ShortLister

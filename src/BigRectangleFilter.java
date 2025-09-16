@@ -1,4 +1,4 @@
-import java.awt.Rectangle;
+import java.awt.*;
 
 public class BigRectangleFilter implements Filter
 {
@@ -6,10 +6,10 @@ public class BigRectangleFilter implements Filter
     public boolean accept(Object x)
     {
         boolean ret = false;
-        int rectPerim = 0;
+        double rectPerim = 0;
         Rectangle r = (Rectangle) x;
 
-        rectPerim = (r.height * 2) + (r.width * 2);
+        rectPerim = (r.getHeight() * 2) + (r.getWidth() * 2);
 
         if (rectPerim > 10)
         {
