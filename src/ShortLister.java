@@ -18,12 +18,13 @@ public class ShortLister
 
         File selectedFile;
 
+        ShortWordFilter filter = new ShortWordFilter();
+
         String rec = "";
 
         ArrayList<String> lines = new ArrayList<>();
 
         String[] fields;
-
 
         try
         {
@@ -55,8 +56,28 @@ public class ShortLister
 
                 for(String l : lines)
                 {
+                    int fieldsIndex = 0;
+                    boolean shortWord = false;
                     fields = l.split(" ");
+
+                    for(String f : fields)
+                    {
+                        shortWord = filter.accept(fields[fieldsIndex]);
+
+                        if(shortWord)
+                        {
+                            System.out.println("\n\n" + fields[fieldsIndex]);
+                        }
+
+                        fieldsIndex++;
+                    }
                 }
+            }
+            else
+            {
+                System.out.println("No file was selected.");
+                System.out.println("Please run the program again to select a file.");
+                System.exit(0);
             }
         }
         catch (FileNotFoundException e)
