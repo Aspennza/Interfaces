@@ -70,9 +70,6 @@ public class ShortLister
                 //This algorithm splits each line from the file into individual words, then filters those words by length and prints words below 5 characters to the console
                 for(String l : lines)
                 {
-                    //This int tracks the current index for the fields array as it is looped through
-                    int fieldsIndex = 0;
-
                     //This boolean tracks whether each word is longer or shorter than 5 characters and stores a true/false value
                     boolean shortWord = false;
                     fields = l.split(" ");
@@ -80,15 +77,13 @@ public class ShortLister
                     //This algorithm checks if each word in the fields array is longer or shorter than 5 characters and prints the words below 5 characters long
                     for(String f : fields)
                     {
-                        shortWord = filter.accept(fields[fieldsIndex].replaceAll("[.,;?:!()/]", ""));
+                        shortWord = filter.accept(f.replaceAll("[.,;?:!()/]", ""));
 
                         //This algorithm checks that a word is below 5 characters and prints it to the console
                         if(shortWord)
                         {
-                            System.out.println(fields[fieldsIndex].replaceAll("[.,;?:!()/]", ""));
+                            System.out.println(f.replaceAll("[.,;?:!()/]", ""));
                         }
-
-                        fieldsIndex++;
                     }
                 }
             }
