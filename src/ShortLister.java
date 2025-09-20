@@ -6,10 +6,6 @@ import java.util.ArrayList;
 
 import static java.nio.file.StandardOpenOption.CREATE;
 
-//Tasks:
-//Create UML diagrams
-//Write javadoc
-
 /**
  * Implements the ShortWordFilter Object to filter a given text file and output any words less than 5 characters long.
  * @author Zoe Aspenns aspennza@mail.uc.edu
